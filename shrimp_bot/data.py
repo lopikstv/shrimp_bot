@@ -1,5 +1,5 @@
 
-token = "NzIyMDAyNjgyODM0OTc2ODA5.XucvZQ.lO75VQem0J9_PPK-lwabdgMqWCo"
+token = "NzIyMDAyNjgyODM0OTc2ODA5.XucvZQ.F8z1HEcxzLOUQzhuA1jKwI8nm60"
 
 owner_ids = [
     700222381058293793, # 나

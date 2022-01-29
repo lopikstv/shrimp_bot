@@ -88,3 +88,24 @@ async def cal(num=int):
     return result
 
 
+async def n_generator(text : str):
+    n_list = [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "," ]
+    result = ""
+    in_n = False
+    count = 0
+    while True:
+        if in_n and not text[count] in n_list:
+            break
+
+        elif not text[count] in n_list:
+            in_n = False
+
+        elif text[count] in n_list:
+            in_n = True
+        
+        if in_n:
+            result += text[count]
+
+        count += 1
+
+    return result
