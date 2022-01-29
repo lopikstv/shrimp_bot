@@ -88,6 +88,7 @@ async def cal(num=int):
     return result
 
 
+
 async def n_generator(text : str):
     n_list = [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "," ]
     result = ""

@@ -15,11 +15,6 @@ token = token
 game_n = 0
 
 
-xl4 = openpyxl.load_workbook("log_channel.xlsx")
-sheet4 = xl4.active
-xl5 = openpyxl.load_workbook("custom_msg.xlsx")
-sheet5 = xl5.active
-
 
 @loop(count=None, seconds=7)
 async def presence_loop():
