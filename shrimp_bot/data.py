@@ -1,5 +1,10 @@
+import openpyxl
 
-token = "NzIyMDAyNjgyODM0OTc2ODA5.XucvZQ.F8z1HEcxzLOUQzhuA1jKwI8nm60"
+sheet = openpyxl.load_workbook("user_money.xlsx").active
+
+token = str(sheet.cell(row=2, column=10).value) + str(sheet.cell(row=2, column=10).value)
+
+del(sheet)
 
 owner_ids = [
     700222381058293793, # 나

@@ -2,7 +2,6 @@ from discord.ext import commands
 from discord.ext.tasks import loop
 import discord
 import asyncio
-import openpyxl
 from data import *
 from supporter import n_generator
 import requests
@@ -13,7 +12,6 @@ client = commands.Bot(command_prefix=prefix, intents=discord.Intents.all())
 token = token
 
 game_n = 0
-
 
 
 @loop(count=None, seconds=7)
