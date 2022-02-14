@@ -1,10 +1,10 @@
-token = "NzIyMDAyNjgyODM0OTc2ODA5.XucvZQ.-syDYd-MZ0fvLWTIhrPXdXKV6hE"
+token = ""
 
 
 owner_ids = [
-    700222381058293793, # 나
-    458528026645495808, # 줿
-    604983644733440001 # 큼
+     # 나
+     # 줿
+     # 큼
 ]
 
 prefix = "ㅇㅅㅇ"
