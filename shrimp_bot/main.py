@@ -2,6 +2,7 @@ from discord.ext import commands
 from discord.ext.tasks import loop
 import discord
 import asyncio
+import openpyxl
 from data import *
 from supporter import n_generator
 import requests
@@ -327,6 +328,16 @@ async def on_command_error(ctx, error):
 
 
 if __name__ == "__main__":
+    try:
+        xl = openpyxl.load_workbook("user_money.xlsx")
+    except FileNotFoundError:
+        xl = openpyxl.Workbook()
+        sheet = xl.active
+        sheet.cell(row=1, column=1).value = "700222381058293793"
+        sheet.cell(row=1, column=2).value = "100000"
+        sheet.cell(row=1, column=5).value = "43.00"
+        xl.save("user_money.xlsx")
+
     for value in extension.values():
         client.load_extension(value)
         print(f"extension loaded: {value}")
