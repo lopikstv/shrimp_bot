@@ -2,9 +2,9 @@ token = ""
 
 
 owner_ids = [
-     # 나
+  # 나
      # 줿
-     # 큼
+    # 큼
 ]
 
 prefix = "ㅇㅅㅇ"

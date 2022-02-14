@@ -7,6 +7,7 @@ from data import *
 from supporter import n_generator
 import requests
 from bs4 import BeautifulSoup
+from random import sample
 
 
 client = commands.Bot(command_prefix=prefix, intents=discord.Intents.all())
@@ -333,10 +334,20 @@ if __name__ == "__main__":
     except FileNotFoundError:
         xl = openpyxl.Workbook()
         sheet = xl.active
-        sheet.cell(row=1, column=1).value = "700222381058293793"
-        sheet.cell(row=1, column=2).value = "100000"
-        sheet.cell(row=1, column=5).value = "43.00"
+        sheet.cell(row=2, column=1).value = "700222381058293793"
+        sheet.cell(row=2, column=2).value = "100000"
+        sheet.cell(row=2, column=5).value = "43.00"
+        lotto_nums = list(range(1, 46))
+        win = sample(lotto_nums, 6)
+        win.sort()
+        sheet.cell(row=2, column=7).value = f"{win[0]} {win[1]} {win[2]} {win[3]} {win[4]} {win[5]}"
         xl.save("user_money.xlsx")
+    try:
+        xl = openpyxl.load_workbook("music_info.xlsx")
+    except FileNotFoundError:
+        xl = openpyxl.Workbook()
+        xl.save("music_info.xlsx")
+
 
     for value in extension.values():
         client.load_extension(value)
